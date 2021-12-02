@@ -8,16 +8,22 @@ import { DataService } from '../data.service';
 export class HomeComponent implements OnInit {
 
   isServerLive : boolean = false;
+  serverName = '';
 
   constructor(private dataSvc:DataService) {
     console.log(this.dataSvc.countryList);
    }
 
    onServerStart() {
-     this.isServerLive = true;
+     this.isServerLive = !this.isServerLive;
    }
 
-  ngOnInit(): void {
+   onUpdateServerName(event: Event) { // (event: any)
+    this.serverName = (<HTMLInputElement>event.target).value;
+    console.log(event);
+  }
+
+   ngOnInit(): void {
   }
 
 }

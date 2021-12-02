@@ -2,11 +2,23 @@
 
     <p>home works! 1</p>
 
-    <button (click)="onServerStart()">
+    <button *ngIf="!isServerLive" class="btn btn-primary" (click)="onServerStart()">
         Start server
     </button>
 
-    <p *ngIf="isServerLive">Service is live...</p>
+    <button *ngIf="isServerLive" class="btn btn-primary" (click)="onServerStart()">
+        Stop server
+    </button>
+    <p></p>
+    <p class="display-4 text-success" *ngIf="isServerLive">{{serverName}} Server is live...</p>
+    <p class=" display-4 text-info" *ngIf="!isServerLive">{{serverName}} Server is not live...</p>
+    <p></p>
+    <input type="text" [(ngModel)]="serverName">
 
+
+    
+    
+    
+    <!-- *ngIf *ngFor *ngSwitch  -->
 
 </div>

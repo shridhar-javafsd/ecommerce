@@ -18,7 +18,7 @@ import { ForgotpasswordComponent } from './user/forgotpassword/forgotpassword.co
 import { ResetpasswordComponent } from './user/resetpassword/resetpassword.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import { ProductsNewComponent } from './products/products-new/products-new.component';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     //components
@@ -45,7 +45,8 @@ import { ProductsNewComponent } from './products/products-new/products-new.compo
       { path: "home", component: HomeComponent },
       { path: "products", component: ProductsNewComponent },
       { path: "", component: HomeComponent }
-    ])
+    ]), 
+    FormsModule
   ],
   providers: [
     //services will go inside the providers
