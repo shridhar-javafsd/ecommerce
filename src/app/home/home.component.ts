@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import {appServercolor} from '../servercolor.directive';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -19,7 +20,8 @@ export class HomeComponent implements OnInit {
    }
 
    onUpdateServerName(event: Event) { // (event: any)
-    this.serverName = (<HTMLInputElement>event.target).value;
+    this.serverName = 
+    (<HTMLInputElement>event.target).value;
     console.log(event);
   }
 
