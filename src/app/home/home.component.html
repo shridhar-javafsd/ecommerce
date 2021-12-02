@@ -10,8 +10,10 @@
         Stop server
     </button>
     <p></p>
-    <p class="display-4 text-success" *ngIf="isServerLive">{{serverName}} Server is live...</p>
-    <p class=" display-4 text-info" *ngIf="!isServerLive">{{serverName}} Server is not live...</p>
+    <p class="display-4 text-success" 
+    *ngIf="isServerLive">{{serverName}} Server is live...</p>
+    <p class=" display-4 text-info" 
+    *ngIf="!isServerLive">{{serverName}} Server is not live...</p>
     <p></p>
     <input type="text" [(ngModel)]="serverName">
 
