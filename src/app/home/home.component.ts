@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
-import {appServercolor} from '../servercolor.directive';
+// import {appServercolor} from '../servercolor.directive';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
